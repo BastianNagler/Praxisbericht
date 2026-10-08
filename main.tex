@@ -1,0 +1,43 @@
+\documentclass[a4paper,
+DIV=13,
+12pt,
+BCOR=10mm,
+department=FakEI,
+twoside,
+parskip=half,
+automark,
+logostyle=flat,
+]{OTHRartcl}
+
+\usepackage[english,ngerman]{babel}
+\usepackage[hidelinks]{hyperref}
+
+\date{\today}
+
+\usepackage[headsepline]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\automark[section]{section}
+\automark*[subsection]{}
+
+\documenttype{Praxisbericht}
+
+\title{Praxissemester bei F.EE Industrieautomation GmbH}
+\author{Bastian Nagler}
+\studentid{3471708}
+\department{Elektro- und Informationstechnik}
+\studyprogramme{Bachelor Elektro- und Informationstechnik}
+
+\externallogo[height=1.5cm]{./figures/FEE-Gruppe_Logo.png}
+
+\hypersetup
+{
+	pdftitle=Praxisbericht,
+	pdfauthor=Bastian Nagler,
+}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\end{document}
