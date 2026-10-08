@@ -1,0 +1,5 @@
+./build/*
+./OTHRegensburg-CI/*
+*.synctex
+*.synctex.gz
+*.fdb_latexmk
