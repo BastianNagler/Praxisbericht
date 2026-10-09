@@ -4,4 +4,4 @@ OTHRegensburg-CI/
 *.synctex.gz
 *.fdb_latexmk
 *.log
-*.pdf
+main.pdf
