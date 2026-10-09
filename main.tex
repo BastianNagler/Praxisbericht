@@ -1,0 +1,46 @@
+\documentclass[10pt]{article}
+\usepackage{preamble}
+
+\date{\today}
+
+\title{Praxisbericht Bastian Nagler}
+\def\MatNr{3471708}
+
+
+\begin{document}
+
+\pagenumbering{gobble}
+\begin{titlepage}
+	\thispagestyle{empty}
+
+	\begin{center}
+		\includegraphics[width=0.7\textwidth]{./figures/OTHR_OTHR_Logo}\\
+		\includegraphics[width=0.7\textwidth]{./figures/FEE-Gruppe_Logo.png}\\
+		\vspace*{\stretch{1}}
+		\Huge
+		\textsc{\MyTitle}
+	\end{center}
+\end{titlepage}
+
+\newpage
+\tableofcontents
+\clearpage
+
+\pagestyle{fancy}
+\lhead{\MyTitle}
+\rhead{\includegraphics[width=0.1\textwidth]{./figures/FEE-Gruppe_Logo.png}}
+\cfoot{\vspace{-20pt}\thepage}
+\pagenumbering{arabic}
+% \setlength{\columnsep}{1pt}
+\raggedcolumns{}
+
+\include{sections/verlauf}
+\include{sections/taetigkeiten}
+
+
+
+
+
+
+
+\end{document}
