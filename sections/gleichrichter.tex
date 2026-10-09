@@ -1,0 +1,45 @@
+\section{Auslegung der Steuerung und Überwachung eines Hochleistungs-Gleichrichters}
+
+\subsection{Aufgabenstellung und Ausgangslage}
+Zum Einstieg in das CAE-System \textit{EPLAN Electric P8 (Version 2025)} und die betrieblichen Standards wurde der Schaltplan für die Steuerung und Überwachung eines Hochleistungs-Gleichrichters erstellt.
+Als Grundlage diente ein Schaltungsentwurf des Auftraggebers.
+
+Die Aufgabe bestand darin, diesen Entwurf auf fertigungstechnische Machbarkeit zu prüfen, Korrekturen vorzunehmen, einen vollständigen Schaltplan zu erstellen und die passenden Betriebsmittel auszuwählen.
+
+\subsection{Normgerechte Strukturierung nach DIN EN 81346--2}
+Der Schaltplan wurde nach der Norm \textbf{DIN EN 81346--2} aufgebaut.
+Dadurch wurden die Betriebsmittel anhand ihrer Funktion und Einbauortes eindeutig gekennzeichnet.
+Dies wurde so gemacht, da dadurch die Fertigung und Inbetriebnahme vereinfacht wird und die Dokumentation für den späteren Betrieb und die Wartung des Gleichrichters normgerecht ist.
+
+\subsection{Schaltungsprüfung und konstruktive Anpassungen}
+Der ursprüngliche Entwurf enthielt einige Details, die in der Fertigung zu Problemen geführt hätten. Folgende Änderungen wurden umgesetzt:
+\begin{itemize}
+    \item \textbf{Klemmenanschlüsse bereinigen:} Im Entwurf waren teilweise zwei Adern auf einen Klemmenanschluss gelegt.
+          Da Reihenklemmen meist nur für einen Leiter pro Klemmstelle zugelassen sind, wurden zusätzliche Klemmen eingeplant.
+          Um Kosten zu sparen, wurde dort, wo es möglich war, auf die Verwendung von Steg- und Aderbrücken gesetzt.
+    \item \textbf{Trennung der Stromkreise:} Um Verdrahtungsfehler bei der Montage zu verhindern und Störeinflüsse zu vermeiden, wurden die Klemmenleisten nach Spannung und Funktion getrennt aufgebaut:
+          \begin{itemize}
+              \item \SI{400}{\volt} AC (Leistungsteil)
+              \item \SI{24}{\volt} DC (Steuerspannung)
+              \item Mess- und Meldesignale
+          \end{itemize}
+\end{itemize}
+
+\subsection{Auswahl und Dimensionierung der Komponenten}
+Auf Basis der technischen Daten des Gleichrichters und der Steuerungskomponenten wurden die Betriebsmittel ausgewählt und überprüft:
+\begin{itemize}
+    \item \textbf{Schalt- und Schutzgeräte:} Schütze wurden passend zur geschalteten Last und der jeweiligen Gebrauchskategorie (AC-1 bzw. AC-3) dimensioniert.
+          Leitungsschutzschalter und Sicherungen wurden bezüglich Nennstrom und Auslösecharakteristik gewählt.
+    \item \textbf{Überspannungsschutz:} Für den weiteren Schutz wurden Überspannungsableiter eingeplant.
+    \item \textbf{Leitungen und Klemmen:} Querschnitte von Leitungen und Klemmen wurden anhand der Strombelastbarkeit und der Verlegeart gewählt.
+          Für Signalleitungen wurden geschirmte Typen vorgesehen.
+\end{itemize}
+
+\subsection{Artikelverwaltung und Anbindung an FactWork}
+Damit der Schaltschrank wirtschaftlich gefertigt werden kann, wurden überwiegend Bauteile ausgewählt, die bei F.EE bereits als Standardartikel hinterlegt sind.
+
+Die Artikeldaten wurden über die Schnittstelle zum internen ERP-System \textit{FactWork} in EPLAN übernommen:
+\begin{itemize}
+    \item Alle relevanten Daten (Bestellnummern, Hersteller, technische Kennwerte) sind direkt mit den Schaltplan-Symbolen verknüpft.
+    \item Nach Fertigstellung des Plans können Stücklisten, Klemmenpläne und Kabelpläne automatisch generiert und direkt an den Einkauf und den Schaltschrankbau übergeben werden.
+\end{itemize}
