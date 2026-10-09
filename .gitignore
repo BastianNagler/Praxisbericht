@@ -1,5 +1,7 @@
-./build/*
-./OTHRegensburg-CI/*
+build/
+OTHRegensburg-CI/
 *.synctex
 *.synctex.gz
 *.fdb_latexmk
+*.log
+*.pdf
